@@ -1,0 +1,32 @@
+{
+  "name": "picsio-qa-challenge",
+  "version": "1.0.0",
+  "description": "Risk-based Pics.io video player test challenge",
+  "scripts": {
+    "login": "node login.mjs",
+    "test": "playwright test",
+    "test:list": "playwright test --list",
+    "test:unit": "node --test checks/*.test.mjs",
+    "test:headed": "npm test -- --headed",
+    "test:repeat": "npm test -- --repeat-each=3",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run typecheck && npm run test:unit && npm run test:list",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "private": true,
+  "engines": {
+    "node": "^22.21.0 || >=24.0.0"
+  }
+}
