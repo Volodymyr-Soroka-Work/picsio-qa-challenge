@@ -1,0 +1,10 @@
+node_modules/
+.env*
+!.env.example
+.auth/
+*storage-state*.json
+playwright-report/
+test-results/
+blob-report/
+*.log
+.DS_Store
